@@ -1,0 +1,233 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const base = import.meta.env.BASE_URL;
+
+const services = [
+  { name: "Home Repairs", description: "Drywall, doors, flooring, and general fixes", icon: "🔧" },
+  { name: "Painting", description: "Interior & exterior painting, touch-ups, and staining", icon: "🎨" },
+  { name: "Carpentry", description: "Custom shelving, trim work, and wood repairs", icon: "🪚" },
+  { name: "Plumbing", description: "Faucet installation, leak repairs, and fixtures", icon: "🚿" },
+  { name: "Electrical", description: "Light fixtures, outlets, and switch installation", icon: "💡" },
+  { name: "Assembly", description: "Furniture assembly, mounting TVs, and installations", icon: "🔩" },
+];
+
+const reviews = [
+  { text: "Mike came out the same day I called and fixed multiple issues around the house. Professional, fair pricing, and great work. Highly recommend!", author: "Sarah M.", rating: 5 },
+  { text: "Finally found a reliable handyman in Mississauga! He installed new light fixtures and repaired my deck. Everything looks perfect. Will definitely call again.", author: "David K.", rating: 5 },
+  { text: "Excellent service from start to finish. Showed up on time, completed the job efficiently, and cleaned up after. You can tell he takes pride in his work.", author: "Jennifer L.", rating: 5 },
+];
+---
+
+<Layout title="Handyman Mississauga | Professional Home Repair Services">
+  <main class="min-h-screen">
+    <!-- Hero Section -->
+    <section class="relative text-white min-h-[600px] md:min-h-[700px] bg-gradient-to-br from-amber-900 via-neutral-900 to-neutral-950">
+      <div class="absolute inset-0 opacity-20">
+        <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%23ffffff\" fill-opacity=\"0.1\"%3E%3Cpath d=\"M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
+      </div>
+      <div class="relative max-w-6xl mx-auto px-4 py-24 md:py-32">
+        <div class="flex flex-col items-center text-center">
+          <div class="inline-flex items-center gap-2 bg-amber-500/20 text-amber-300 px-4 py-2 rounded-full text-sm font-medium mb-6 backdrop-blur-sm">
+            <span>⭐</span>
+            <span>Trusted by 100+ Mississauga Homeowners</span>
+          </div>
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight drop-shadow-lg">
+            Your Trusted <span class="text-amber-400">Handyman</span> in Mississauga
+          </h1>
+          <p class="text-xl text-neutral-200 mb-8 max-w-2xl drop-shadow">
+            Professional home repair and improvement services. No job too small. Licensed, insured, and ready to help with all your home projects.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="tel:+16475551234" class="inline-flex items-center justify-center gap-2 bg-amber-500 hover:bg-amber-600 text-white font-semibold px-8 py-4 rounded-lg transition-colors text-lg shadow-lg">
+              📞 (647) 555-1234
+            </a>
+            <a href="#services" class="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-lg transition-colors text-lg border border-white/20">
+              View Services
+            </a>
+          </div>
+          <div class="mt-12 flex flex-wrap justify-center gap-6 text-sm text-neutral-300">
+            <div class="flex items-center gap-2">
+              <span class="text-green-400">✓</span> Licensed & Insured
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-green-400">✓</span> Free Estimates
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-green-400">✓</span> Same-Day Service
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-20 bg-neutral-800">
+      <div class="max-w-4xl mx-auto px-4 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Why Choose Us?</h2>
+        <p class="text-lg text-neutral-200 leading-relaxed mb-8">
+          With over 15 years of experience serving Mississauga homeowners, we take pride in delivering quality workmanship on every project. From minor repairs to major renovations, our skilled team handles it all with attention to detail and respect for your home. We show up on time, communicate clearly, and leave your space cleaner than we found it.
+        </p>
+        <div class="grid md:grid-cols-3 gap-8 mt-12">
+          <div class="text-center">
+            <div class="text-4xl mb-4">🏆</div>
+            <h3 class="text-xl font-semibold text-white mb-2">15+ Years Experience</h3>
+            <p class="text-neutral-400">Trusted expertise you can rely on</p>
+          </div>
+          <div class="text-center">
+            <div class="text-4xl mb-4">⚡</div>
+            <h3 class="text-xl font-semibold text-white mb-2">Fast Response</h3>
+            <p class="text-neutral-400">Same-day service available</p>
+          </div>
+          <div class="text-center">
+            <div class="text-4xl mb-4">💰</div>
+            <h3 class="text-xl font-semibold text-white mb-2">Fair Pricing</h3>
+            <p class="text-neutral-400">Transparent quotes, no surprises</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-neutral-900">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Our Services</h2>
+          <p class="text-lg text-neutral-300">Complete handyman services for your home</p>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {services.map((service) => (
+            <div class="bg-neutral-800 rounded-xl p-8 hover:shadow-lg hover:shadow-amber-500/10 transition-all border border-neutral-700 hover:border-amber-500/30">
+              <div class="text-4xl mb-4">{service.icon}</div>
+              <h3 class="text-xl font-semibold text-white mb-2">{service.name}</h3>
+              <p class="text-neutral-300">{service.description}</p>
+            </div>
+          ))}
+        </div>
+        <div class="text-center mt-12">
+          <p class="text-neutral-400 mb-4">Don't see what you need? We do much more!</p>
+          <a href="tel:+16475551234" class="text-amber-400 hover:underline font-semibold">Call us to discuss your project →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="py-20 bg-gradient-to-br from-amber-900/50 to-neutral-900 text-white">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">What Our Customers Say</h2>
+          <div class="flex items-center justify-center gap-1 text-yellow-400 text-2xl">★★★★★</div>
+          <p class="text-amber-200 mt-2">5-Star Rated Handyman Service</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+          {reviews.map((review) => (
+            <div class="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/10">
+              <div class="flex gap-1 text-yellow-400 mb-4">{"★".repeat(review.rating)}</div>
+              <p class="text-neutral-200 mb-6 italic">"{review.text}"</p>
+              <p class="text-white font-semibold">— {review.author}</p>
+              <p class="text-amber-300 text-sm">Verified Customer</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Service Areas Section -->
+    <section class="py-20 bg-neutral-800">
+      <div class="max-w-4xl mx-auto px-4 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Serving All of Mississauga</h2>
+        <p class="text-lg text-neutral-300 mb-8">
+          We proudly serve homeowners throughout Mississauga and surrounding areas including:
+        </p>
+        <div class="flex flex-wrap justify-center gap-3 text-neutral-200">
+          {["Port Credit", "Streetsville", "Meadowvale", "Erin Mills", "Cooksville", "Clarkson", "Lakeview", "Malton", "Dixie", "Hurontario"].map((area) => (
+            <span class="bg-neutral-700 px-4 py-2 rounded-full">{area}</span>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-neutral-900">
+      <div class="max-w-4xl mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Get Your Free Quote</h2>
+          <p class="text-lg text-neutral-300">Ready to tackle your home projects? Contact us today!</p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-12">
+          <div class="space-y-6">
+            <div class="flex items-start gap-4">
+              <div class="bg-amber-900/30 p-3 rounded-lg text-2xl">📞</div>
+              <div>
+                <h3 class="font-semibold text-white">Phone</h3>
+                <a href="tel:+16475551234" class="text-amber-400 hover:underline text-lg">(647) 555-1234</a>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="bg-amber-900/30 p-3 rounded-lg text-2xl">✉️</div>
+              <div>
+                <h3 class="font-semibold text-white">Email</h3>
+                <a href="mailto:info@handymanmississauga.ca" class="text-amber-400 hover:underline">info@handymanmississauga.ca</a>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="bg-amber-900/30 p-3 rounded-lg text-2xl">📍</div>
+              <div>
+                <h3 class="font-semibold text-white">Service Area</h3>
+                <p class="text-neutral-300">Mississauga & Surrounding Areas</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="bg-amber-900/30 p-3 rounded-lg text-2xl">🕐</div>
+              <div>
+                <h3 class="font-semibold text-white">Hours</h3>
+                <p class="text-neutral-300">Mon–Fri: 8:00 AM – 6:00 PM<br />Saturday: 9:00 AM – 4:00 PM<br />Sunday: Closed</p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-neutral-800 rounded-xl p-8 border border-neutral-700">
+            <h3 class="text-xl font-semibold text-white mb-6">Request a Quote</h3>
+            <form class="space-y-4">
+              <div>
+                <input type="text" placeholder="Your Name" class="w-full bg-neutral-700 border border-neutral-600 rounded-lg px-4 py-3 text-white placeholder-neutral-400 focus:outline-none focus:border-amber-500" />
+              </div>
+              <div>
+                <input type="tel" placeholder="Phone Number" class="w-full bg-neutral-700 border border-neutral-600 rounded-lg px-4 py-3 text-white placeholder-neutral-400 focus:outline-none focus:border-amber-500" />
+              </div>
+              <div>
+                <textarea placeholder="Describe your project..." rows="4" class="w-full bg-neutral-700 border border-neutral-600 rounded-lg px-4 py-3 text-white placeholder-neutral-400 focus:outline-none focus:border-amber-500 resize-none"></textarea>
+              </div>
+              <button type="submit" class="w-full bg-amber-500 hover:bg-amber-600 text-white font-semibold py-3 rounded-lg transition-colors">
+                Get Free Quote
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-amber-600">
+      <div class="max-w-4xl mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold text-white mb-4">Ready to Get Started?</h2>
+        <p class="text-amber-100 mb-8 text-lg">No job too big or small. Call today for a free estimate!</p>
+        <a href="tel:+16475551234" class="inline-flex items-center gap-2 bg-white text-amber-600 font-bold px-8 py-4 rounded-lg hover:bg-neutral-100 transition-colors text-lg shadow-lg">
+          📞 Call (647) 555-1234
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-neutral-950 text-neutral-400">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+          <div class="flex items-center gap-3">
+            <span class="text-2xl">🔧</span>
+            <span class="text-white font-semibold">Handyman Mississauga</span>
+          </div>
+          <p class="text-sm">© {new Date().getFullYear()} Handyman Mississauga. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </main>
+</Layout>
