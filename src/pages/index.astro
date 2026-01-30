@@ -23,24 +23,30 @@ const reviews = [
 ---
 
 <Layout title="Handyman Mississauga Contracting | Trusted Since 2002">
-  <main class="min-h-screen bg-white">
+  <main class="min-h-screen bg-white dark:bg-neutral-900">
     <!-- Header -->
-    <header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm shadow-sm z-50">
+    <header class="fixed top-0 left-0 right-0 bg-white/95 dark:bg-neutral-800/95 backdrop-blur-sm shadow-sm dark:shadow-neutral-900/50 z-50">
       <div class="max-w-7xl mx-auto px-4">
         <div class="flex justify-between items-center h-16 md:h-20">
           <div class="flex items-center gap-3">
             <img src={`${base}logo-square.png`} alt="Handyman Mississauga" width="56" height="56" class="w-12 h-12 md:w-14 md:h-14 rounded-xl" />
-            <span class="hidden sm:block font-semibold text-gray-900">Handyman Mississauga</span>
+            <span class="hidden sm:block font-semibold text-gray-900 dark:text-white">Handyman Mississauga</span>
           </div>
           <nav class="hidden md:flex items-center gap-8">
-            <a href="#about" class="text-gray-600 hover:text-blue-800 transition-colors">About</a>
-            <a href="#services" class="text-gray-600 hover:text-blue-800 transition-colors">Services</a>
-            <a href="#reviews" class="text-gray-600 hover:text-blue-800 transition-colors">Reviews</a>
-            <a href="#contact" class="text-gray-600 hover:text-blue-800 transition-colors">Contact</a>
+            <a href="#about" class="text-gray-600 dark:text-gray-300 hover:text-blue-800 dark:hover:text-blue-400 transition-colors">About</a>
+            <a href="#services" class="text-gray-600 dark:text-gray-300 hover:text-blue-800 dark:hover:text-blue-400 transition-colors">Services</a>
+            <a href="#reviews" class="text-gray-600 dark:text-gray-300 hover:text-blue-800 dark:hover:text-blue-400 transition-colors">Reviews</a>
+            <a href="#contact" class="text-gray-600 dark:text-gray-300 hover:text-blue-800 dark:hover:text-blue-400 transition-colors">Contact</a>
           </nav>
-          <a href="tel:416-301-4867" class="bg-blue-800 hover:bg-blue-900 text-white px-4 py-2 md:px-6 md:py-2.5 rounded-full font-medium transition-colors text-sm md:text-base">
-            Call Now
-          </a>
+          <div class="flex items-center gap-3">
+            <button onclick="toggleTheme()" class="p-2 rounded-lg bg-gray-100 dark:bg-neutral-700 hover:bg-gray-200 dark:hover:bg-neutral-600 transition-colors" aria-label="Toggle dark mode">
+              <span class="dark:hidden">🌙</span>
+              <span class="hidden dark:inline">☀️</span>
+            </button>
+            <a href="tel:416-301-4867" class="bg-blue-800 hover:bg-blue-900 dark:bg-blue-700 dark:hover:bg-blue-600 text-white px-4 py-2 md:px-6 md:py-2.5 rounded-full font-medium transition-colors text-sm md:text-base">
+              Call Now
+            </a>
+          </div>
         </div>
       </div>
     </header>
@@ -74,28 +80,28 @@ const reviews = [
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20 md:py-28 bg-gray-50">
+    <section id="about" class="py-20 md:py-28 bg-gray-50 dark:bg-neutral-800">
       <div class="max-w-7xl mx-auto px-4">
         <div class="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Quality Craftsmanship You Can Trust</h2>
-            <div class="mt-6 space-y-4 text-lg text-gray-600">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">Quality Craftsmanship You Can Trust</h2>
+            <div class="mt-6 space-y-4 text-lg text-gray-600 dark:text-gray-300">
               <p>Handyman Mississauga Contracting has been serving Mississauga and the Greater Toronto Area for over two decades. Founded in 2002, owner Davin has built a reputation for honest, quality workmanship that keeps customers coming back.</p>
               <p>When you call us, you're not getting a call center - you're getting Davin and his team directly. We treat every home like our own, taking pride in clean work sites and attention to detail.</p>
               <p>From small repairs to full renovations, we stand behind every project with our 100% satisfaction guarantee - in writing.</p>
             </div>
             <div class="mt-8 grid grid-cols-3 gap-6">
               <div class="text-center">
-                <div class="text-3xl md:text-4xl font-bold text-blue-800">20+</div>
-                <div class="text-gray-600">Years Experience</div>
+                <div class="text-3xl md:text-4xl font-bold text-blue-800 dark:text-blue-400">20+</div>
+                <div class="text-gray-600 dark:text-gray-400">Years Experience</div>
               </div>
               <div class="text-center">
-                <div class="text-3xl md:text-4xl font-bold text-blue-800">99+</div>
-                <div class="text-gray-600">5-Star Reviews</div>
+                <div class="text-3xl md:text-4xl font-bold text-blue-800 dark:text-blue-400">99+</div>
+                <div class="text-gray-600 dark:text-gray-400">5-Star Reviews</div>
               </div>
               <div class="text-center">
-                <div class="text-3xl md:text-4xl font-bold text-blue-800">100%</div>
-                <div class="text-gray-600">Satisfaction</div>
+                <div class="text-3xl md:text-4xl font-bold text-blue-800 dark:text-blue-400">100%</div>
+                <div class="text-gray-600 dark:text-gray-400">Satisfaction</div>
               </div>
             </div>
           </div>
@@ -107,18 +113,18 @@ const reviews = [
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="py-20 md:py-28 bg-white">
+    <section id="services" class="py-20 md:py-28 bg-white dark:bg-neutral-900">
       <div class="max-w-7xl mx-auto px-4">
         <div class="text-center max-w-3xl mx-auto">
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Our Services</h2>
-          <p class="mt-4 text-lg text-gray-600">From small repairs to complete renovations, we handle it all with the same dedication to quality.</p>
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">Our Services</h2>
+          <p class="mt-4 text-lg text-gray-600 dark:text-gray-300">From small repairs to complete renovations, we handle it all with the same dedication to quality.</p>
         </div>
         <div class="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service) => (
-            <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl hover:border-blue-100 transition-all">
+            <div class="bg-white dark:bg-neutral-800 p-8 rounded-2xl shadow-lg border border-gray-100 dark:border-neutral-700 hover:shadow-xl hover:border-blue-100 dark:hover:border-blue-800 transition-all">
               <div class="text-4xl mb-4">{service.icon}</div>
-              <h3 class="text-xl font-semibold text-gray-900">{service.title}</h3>
-              <p class="mt-3 text-gray-600">{service.description}</p>
+              <h3 class="text-xl font-semibold text-gray-900 dark:text-white">{service.title}</h3>
+              <p class="mt-3 text-gray-600 dark:text-gray-300">{service.description}</p>
             </div>
           ))}
         </div>
@@ -126,7 +132,7 @@ const reviews = [
     </section>
 
     <!-- Reviews Section -->
-    <section id="reviews" class="py-20 md:py-28 bg-blue-900">
+    <section id="reviews" class="py-20 md:py-28 bg-blue-900 dark:bg-blue-950">
       <div class="max-w-7xl mx-auto px-4">
         <div class="text-center max-w-3xl mx-auto">
           <h2 class="text-3xl md:text-4xl font-bold text-white">What Our Customers Say</h2>
@@ -134,11 +140,11 @@ const reviews = [
         </div>
         <div class="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {reviews.map((review) => (
-            <div class="bg-white p-8 rounded-2xl">
+            <div class="bg-white dark:bg-neutral-800 p-8 rounded-2xl">
               <div class="text-amber-400 mb-4">★★★★★</div>
-              <p class="text-gray-600 italic">"{review.text}"</p>
-              <div class="mt-4 font-semibold text-gray-900">{review.name}</div>
-              <div class="text-sm text-gray-500">Google Review</div>
+              <p class="text-gray-600 dark:text-gray-300 italic">"{review.text}"</p>
+              <div class="mt-4 font-semibold text-gray-900 dark:text-white">{review.name}</div>
+              <div class="text-sm text-gray-500 dark:text-gray-400">Google Review</div>
             </div>
           ))}
         </div>
@@ -146,41 +152,41 @@ const reviews = [
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 md:py-28 bg-white">
+    <section id="contact" class="py-20 md:py-28 bg-white dark:bg-neutral-900">
       <div class="max-w-7xl mx-auto px-4">
         <div class="grid md:grid-cols-2 gap-12">
           <div>
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Get Your Free Quote Today</h2>
-            <p class="mt-4 text-lg text-gray-600">Ready to get started? Give us a call or send an email. We respond to all inquiries within 24 hours.</p>
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">Get Your Free Quote Today</h2>
+            <p class="mt-4 text-lg text-gray-600 dark:text-gray-300">Ready to get started? Give us a call or send an email. We respond to all inquiries within 24 hours.</p>
             <div class="mt-8 space-y-6">
               <div class="flex items-center gap-4">
-                <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-2xl">📞</div>
+                <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900/50 rounded-full flex items-center justify-center text-2xl">📞</div>
                 <div>
-                  <div class="text-sm text-gray-500">Phone</div>
-                  <a href="tel:416-301-4867" class="text-lg font-semibold text-gray-900 hover:text-blue-800">416-301-4867</a>
+                  <div class="text-sm text-gray-500 dark:text-gray-400">Phone</div>
+                  <a href="tel:416-301-4867" class="text-lg font-semibold text-gray-900 dark:text-white hover:text-blue-800 dark:hover:text-blue-400">416-301-4867</a>
                 </div>
               </div>
               <div class="flex items-center gap-4">
-                <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-2xl">✉️</div>
+                <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900/50 rounded-full flex items-center justify-center text-2xl">✉️</div>
                 <div>
-                  <div class="text-sm text-gray-500">Email</div>
-                  <a href="mailto:service@handymanmississauga.ca" class="text-lg font-semibold text-gray-900 hover:text-blue-800">service@handymanmississauga.ca</a>
+                  <div class="text-sm text-gray-500 dark:text-gray-400">Email</div>
+                  <a href="mailto:service@handymanmississauga.ca" class="text-lg font-semibold text-gray-900 dark:text-white hover:text-blue-800 dark:hover:text-blue-400">service@handymanmississauga.ca</a>
                 </div>
               </div>
               <div class="flex items-center gap-4">
-                <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-2xl">📍</div>
+                <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900/50 rounded-full flex items-center justify-center text-2xl">📍</div>
                 <div>
-                  <div class="text-sm text-gray-500">Location</div>
-                  <div class="text-lg font-semibold text-gray-900">1140 Burnhamthorpe Rd. W. Unit 137<br/>Mississauga, Ontario L5C 0A3</div>
+                  <div class="text-sm text-gray-500 dark:text-gray-400">Location</div>
+                  <div class="text-lg font-semibold text-gray-900 dark:text-white">1140 Burnhamthorpe Rd. W. Unit 137<br/>Mississauga, Ontario L5C 0A3</div>
                 </div>
               </div>
             </div>
-            <div class="mt-8 p-6 bg-amber-50 rounded-2xl border border-amber-100">
+            <div class="mt-8 p-6 bg-amber-50 dark:bg-amber-900/20 rounded-2xl border border-amber-100 dark:border-amber-800/50">
               <div class="flex items-center gap-3">
                 <span class="text-3xl">🛡️</span>
                 <div>
-                  <div class="font-semibold text-gray-900">100% Satisfaction Guarantee</div>
-                  <div class="text-gray-600">We stand behind every project - in writing.</div>
+                  <div class="font-semibold text-gray-900 dark:text-white">100% Satisfaction Guarantee</div>
+                  <div class="text-gray-600 dark:text-gray-300">We stand behind every project - in writing.</div>
                 </div>
               </div>
             </div>
